@@ -18,6 +18,7 @@ const People = lazy(() => import('@pages/People'));
 const Profile = lazy(() => import('@pages/Profile'));
 const Projects = lazy(() => import('@pages/Projects'));
 const ErrorPage = lazy(() => import('@pages/ErrorPage'));
+const Tutorials = lazy(() => import('@pages/Tutorials'));
 const Header = lazy(() => import('@components/Header/Header'));
 const TimesheetDetails = lazy(() => import('@components/TimesheetDetails'));
 const Test = lazy(() => import('@components/PrivateRoute/Test'));
@@ -153,6 +154,7 @@ function App() {
                                     </ProtectedRoute>
                                 }
                             />
+                            <Route path="tutorial" element={<Tutorials />} />
                             <Route path="*" element={<NotFoundPage />} />
                         </Route>
                     </Routes>
